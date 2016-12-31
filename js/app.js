@@ -16,7 +16,7 @@ app.config(function($routeProvider) {
     });
 });
 
-angular.module('myYapp')
+angular.module('myApp')
     .directive('bsActiveLink', ['$location', function ($location) {
     return {
         restrict: 'A', //use as attribute 
