@@ -2,7 +2,7 @@
 var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
-    .when("#/", {
+    .when("/", {
         templateUrl : "templates/korea_frequencies.html"
     })
     .when("/korea_frequencies", {
