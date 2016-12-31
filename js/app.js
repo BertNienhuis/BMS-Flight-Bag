@@ -1,4 +1,4 @@
-angular.module("myApp", ["ngRoute"])
+var myApp = angular.module("myApp", ["ngRoute"])
 	.config(function($routeProvider) {
     $routeProvider
     .when("/", {
@@ -23,6 +23,6 @@ angular.module("myApp", ["ngRoute"])
     });
 });
 
-angular.controller('appController', ['$scope', '$route', function($scope, $route) {
+myApp.controller('appController', ['$scope', '$route', function($scope, $route) {
     $scope.route = $route;
 }])

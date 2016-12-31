@@ -33,7 +33,7 @@
     <![endif]-->
   </head>
 
-  <body ng-app="myApp">
+  <body ng-app="myApp" ng-controller="appController">
   
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
@@ -65,7 +65,7 @@
     <div class="container-fluid" >
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar" bs-active-link>
+          <ul class="nav nav-sidebar">
             <li ng-class="{ active: route.current.activeNav === 'navA' }"><a href="#korea_frequencies">Frequencies</a></li>
             <li ng-class="{ active: route.current.activeNav === 'navA' }"><a href="#korea_map">Map</a></li>
             <li ng-class="{ active: route.current.activeNav === 'navA' }"><a href="#korea_airports">Airports</a></li>
