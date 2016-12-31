@@ -16,10 +16,10 @@ var myApp = angular.module("myApp", ["ngRoute"])
 		controller: "appController",
 		activeNav: "korea_map"
     })
-    .when("/korea_airports", {
-        templateUrl : "templates/korea_airports.html",
+    .when("/korea_charts", {
+        templateUrl : "templates/korea_charts.html",
 		controller: "appController",
-		activeNav: "korea_airports"
+		activeNav: "korea_charts"
     });
 });
 
