@@ -1,5 +1,5 @@
 
-<script type="javascript">
+<script >
 // Using leaflet.js to pan and zoom a big image.
 // See also: http://kempe.net/blog/2014/06/14/leaflet-pan-zoom-image.html
 
@@ -15,7 +15,7 @@ var map = L.map('image-map', {
 // dimensions of the image
 var w = 2000,
     h = 1500,
-    url = 'images/korea_map.png';
+    url = '..\images\korea_map.png';
 
 // calculate the edges of the image, in coordinate space
 var southWest = map.unproject([0, h], map.getMaxZoom()-1);
