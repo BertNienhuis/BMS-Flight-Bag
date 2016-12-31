@@ -1,5 +1,5 @@
 
-angular.module("myApp", ["ngRoute"]);
+var app = angular.module("myApp", ["ngRoute"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
@@ -16,7 +16,7 @@ app.config(function($routeProvider) {
     });
 });
 
-angular.module('myApp')
+app.module('myApp')
     .directive('bsActiveLink', ['$location', function ($location) {
     return {
         restrict: 'A', //use as attribute 
