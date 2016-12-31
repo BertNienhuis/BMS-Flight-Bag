@@ -1,6 +1,5 @@
-
-var app = angular.module("myApp", ["ngRoute"]);
-app.config(function($routeProvider) {
+angular.module("myApp", ["ngRoute"])
+	.config(function($routeProvider) {
     $routeProvider
     .when("/", {
         templateUrl : "templates/korea_frequencies.html"
@@ -16,7 +15,7 @@ app.config(function($routeProvider) {
     });
 });
 
-app.module('myApp')
+angular.module('myApp')
     .directive('bsActiveLink', ['$location', function ($location) {
     return {
         restrict: 'A', //use as attribute 
