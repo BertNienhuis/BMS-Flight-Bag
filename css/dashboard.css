@@ -12,7 +12,7 @@ iframe {
     display: block;
     background: #000;
     border: none;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 60px);
     width: 100%;
 }
 
