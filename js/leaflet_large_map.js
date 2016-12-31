@@ -13,7 +13,7 @@ var map = L.map('image-map', {
  dimensions of the image
 var w = 2000,
     h = 1500,
-    url = '../images/korea_map.png';
+    url = 'https://seoscale.nl/wp-content/uploads/2016/04/https-verbinding.jpg';
 
  calculate the edges of the image, in coordinate space
 var southWest = map.unproject([0, h], map.getMaxZoom()-1);
