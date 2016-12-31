@@ -2,39 +2,27 @@ angular.module("myApp", ["ngRoute"])
 	.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl : "templates/korea_frequencies.html"
+        templateUrl : "templates/korea_frequencies.html",
+		controller: "appController",
+		activeNav: "korea_frequencies"
     })
     .when("/korea_frequencies", {
-        templateUrl : "templates/korea_frequencies.html"
+        templateUrl : "templates/korea_frequencies.html",
+		controller: "appController",
+		activeNav: "korea_frequencies"
     })
     .when("/korea_map", {
-        templateUrl : "templates/korea_map.html"
+        templateUrl : "templates/korea_map.html",
+		controller: "appController",
+		activeNav: "korea_map"
     })
     .when("/korea_airports", {
-        templateUrl : "templates/korea_airports.html"
+        templateUrl : "templates/korea_airports.html",
+		controller: "appController",
+		activeNav: "korea_airports"
     });
 });
 
-angular.module('myApp')
-    .directive('bsActiveLink', ['$location', function ($location) {
-    return {
-        restrict: 'A', //use as attribute 
-        replace: false,
-        link: function (scope, elem) {
-            //after the route has changed
-            scope.$on("$routeChangeSuccess", function () {
-                var hrefs = ['/#' + $location.path(),
-                             '#' + $location.path(), //html5: false
-                             $location.path()]; //html5: true
-                angular.forEach(elem.find('a'), function (a) {
-                    a = angular.element(a);
-                    if (-1 !== hrefs.indexOf(a.attr('href'))) {
-                        a.parent().addClass('active');
-                    } else {
-                        a.parent().removeClass('active');   
-                    };
-                });     
-            });
-        }
-    }
-}]);
+.controller('appController', ['$scope', '$route', function($scope, $route) {
+    $scope.route = $route;
+}])
