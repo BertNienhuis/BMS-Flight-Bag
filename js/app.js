@@ -23,6 +23,6 @@ angular.module("myApp", ["ngRoute"])
     });
 });
 
-.controller('appController', ['$scope', '$route', function($scope, $route) {
+angular.controller('appController', ['$scope', '$route', function($scope, $route) {
     $scope.route = $route;
 }])
