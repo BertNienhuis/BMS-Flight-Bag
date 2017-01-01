@@ -1,4 +1,4 @@
-<H2>Map (click to zoom/pan)</H2>
+<H2>Map</H2>
 <hr>
 <div id="image-gallery" class="cf">
     <img src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image">
@@ -6,7 +6,7 @@
 <script type="text/javascript">
 
     $(function () {
-    var viewer = ImageViewer({maxZoom: 1000});
+    var viewer = ImageViewer({maxZoom: 1000, zoomValue: 250});
     $('.pannable-image').click(function () {
         var imgSrc = this.src,
             highResolutionImage = $(this).data('data-high-res-scr');
