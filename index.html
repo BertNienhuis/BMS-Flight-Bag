@@ -14,7 +14,7 @@
     <meta name="author" content="">
 	
 	<!-- Must be used in order to work on GitHub Pages -->
-	<base href="/BMS-Flight-Bag/" />
+	<!--<base href="/BMS-Flight-Bag/" />-->
 
     <title>Falcon BMS Online Flightbag</title>
 
@@ -31,7 +31,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 	<script src="js/app.js"></script>
 
-	
+	<link href="css/imageviewer.css"  rel="stylesheet" type="text/css" />
+	<script src="js/imageviewer.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
 	
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -56,12 +59,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#">Korea</a></li>
+            <li><a href="#korea">Korea</a></li>
           </ul>
 		   <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Checklists</a></li>
-            <li><a href="#">Emergency Procedures</a></li>
-            <li><a href="#">Pilot Fault List</a></li>
+            <li><a href="#checklists">Checklists</a></li>
+            <li><a href="#emergencyprocedures">Emergency Procedures</a></li>
+            <li><a href="#pilotfaults">Pilot Fault List</a></li>
           </ul>
         </div>
       </div>
@@ -88,9 +91,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!--Image Viewer -->
-	<link href="css/imageviewer.css"  rel="stylesheet" type="text/css" />
-	<script src="js/imageviewer.js"></script>
-
-	<script src="js/bootstrap.min.js"></script>
+	
   </body>
 </html>

@@ -6,6 +6,11 @@ var myApp = angular.module("myApp", ["ngRoute"])
 		controller: "appController",
 		activeNav: "korea_frequencies"
     })
+	.when("/korea", {
+        templateUrl : "templates/korea_frequencies.html",
+		controller: "appController",
+		activeNav: "korea_frequencies"
+    })
     .when("/korea_frequencies", {
         templateUrl : "templates/korea_frequencies.html",
 		controller: "appController",
@@ -20,6 +25,21 @@ var myApp = angular.module("myApp", ["ngRoute"])
         templateUrl : "templates/korea_charts.html",
 		controller: "appController",
 		activeNav: "korea_charts"
+    })
+	.when("/pilotfaults", {
+        templateUrl : "templates/pilotfaults.html",
+		controller: "appController",
+		activeNav: "pilotfaults"
+    })
+	.when("/emergencyprocedures	", {
+        templateUrl : "templates/emergencyprocedures.html",
+		controller: "appController",
+		activeNav: "emergencyprocedures"
+    })
+	.when("/checklists", {
+        templateUrl : "templates/checklist.html",
+		controller: "appController",
+		activeNav: "checklists"
     });
 });
 
