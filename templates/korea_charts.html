@@ -6,6 +6,31 @@ sort_by:        modified_time   # modified_time or path (notice: path is case se
 date_format:    "%A, %B %-d, %Y"
 ---
 
+<h2>Charts</h2>
+<hr>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Airport</th>
+			<th>Diagram</th>
+		</tr>
+	</thead>
+	<tbody>
+	
+	{% assign imgs = (site.static_files | sort: page.sort_by) %}
+    {% for img in imgs reversed %}
+    {% if img.path contains page.image_folder %}
+    {% assign img_name = img.path | remove: page.image_folder | split: '.' | first %}
+    {% assign img_date = img.modified_time | date: page.date_format %}
+	
+		<tr>
+			<td><a href="#{{ img_name }}">{{ img_name }}</a></td>
+			<td><a href="#{{ img_name }}">{{ img_name }}</td>
+		</tr>
+	</tbody>
+</table>
+
 
 <ul class="ins-imgs">
 
