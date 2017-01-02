@@ -28,31 +28,12 @@ date_format:    "%A, %B %-d, %Y"
 			<td><a href="#{{ img_name }}">{{ img_name }}</a></td>
 			<td><a href="#{{ img_name }}">{{ img_name }}</td>
 		</tr>
-	</tbody>
-</table>
-
-
-<ul class="ins-imgs">
-
-    {% assign imgs = (site.static_files | sort: page.sort_by) %}
-    {% for img in imgs reversed %}
-    {% if img.path contains page.image_folder %}
-    {% assign img_name = img.path | remove: page.image_folder | split: '.' | first %}
-    {% assign img_date = img.modified_time | date: page.date_format %}
-
-    <li class="ins-imgs-li" id="{{ img_name }}">
-        <div class="ins-imgs-img" onclick=this.classList.toggle("zoom");>
-            <a name="{{ img.path }}" href="#{{ img_name }}">
-                <img src=".{{ img.path }}"
-                     alt="{{ img_name }}"
-                     style="max-width: {{ page.max_width }}"/>
-            </a>
-        </div>
-        <div class="ins-imgs-label">Image name: {{ img_name }} (added {{ img_date }})</div>
-    </li>
-
+		
+		
     {% endif %}
     {% endfor %}
 
-</ul>
+	</tbody>
+</table>
+
 
