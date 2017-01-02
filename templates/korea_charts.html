@@ -24,7 +24,7 @@ date_format:    "%A, %B %-d, %Y"
     {% if img.path contains page.image_folder %}
     {% assign img_name = img.path | remove: page.image_folder | split: '.' | first %}
 	{% assign airport_name = img_name | split: '_' | first  %}
-	{% assign airport_chart = img_name | remove: airport_name %}
+	{% assign airport_chart = img_name  | capitalize | remove: airport_name %}
     {% assign img_date = img.modified_time | date: page.date_format %}
 	
 		<tr>
