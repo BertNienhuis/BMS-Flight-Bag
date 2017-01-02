@@ -22,6 +22,7 @@ date_format:    "%A, %B %-d, %Y"
     {% for img in imgs reversed %}
     {% if img.path contains page.image_folder %}
     {% assign img_name = img.path | remove: page.image_folder | split: '.' | first %}
+	{% assign airport_name = img_name | split: '_' %}
     {% assign img_date = img.modified_time | date: page.date_format %}
 	
 		<tr>
