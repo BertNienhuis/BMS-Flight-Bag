@@ -28,9 +28,9 @@ date_format:    "%A, %B %-d, %Y"
     {% assign img_date = img.modified_time | date: page.date_format %}
 	
 		<tr>
-			<td><a href="#{{ img_name }}">{{ airport_name }}</a></td>
-			<td><a href=".{{ img.path }}">{{ airport_chart | upcase | slice: 1,10}}</td>
-			<td><a href=".{{ img.path }}">{{ img_name }}</td>
+			<td>{{ airport_name }}</td>
+			<td><a href=".{{ img.path }}">{{ airport_chart | upcase | slice: 1,100}}</td>
+			<td><a href="javascript:openViewer();" data-high-res-src="images/korea_map_large.jpg">{{ img_name }}</td>
 		</tr>
 		
 		
@@ -40,4 +40,16 @@ date_format:    "%A, %B %-d, %Y"
 	</tbody>
 </table>
 
+<div id="image-gallery" class="cf">
+    <img src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image">
+</div>
+<script type="text/javascript">
 
+    $(function openViewer() {
+    var viewer = ImageViewer({maxZoom: 800, zoomValue: 175});
+    $('.pannable-image').click(function () {
+        var imgSrc = this.src,
+            highResolutionImage = $(this).data('high-res-img');
+        viewer.show(imgSrc, highResolutionImage);
+    });
+});</script>
