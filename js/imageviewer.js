@@ -752,7 +752,7 @@
 
         container = $(container);
 
-        if (container.is('img') || (container.is('a')) {
+        if (container.is('img')) {
             imgElm = container;
             imgSrc = imgElm[0].src;
             hiResImg = imgElm.attr('high-res-src') || imgElm.attr('data-high-res-src');
