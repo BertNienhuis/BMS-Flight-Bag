@@ -14,7 +14,6 @@ date_format:    "%A, %B %-d, %Y"
 		<tr>
 			<th>Airport</th>
 			<th>Diagram</th>
-			<th>Full</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -29,8 +28,7 @@ date_format:    "%A, %B %-d, %Y"
 	
 		<tr>
 			<td>{{ airport_name }}</td>
-			<td><a href=".{{ img.path }}">{{ airport_chart | upcase | slice: 1,10}}</td>
-			<td><a src=".{{ img.path }}" data-high-res-src=".{{ img.path }}" alt="" class="pannable-image">{{ airport_chart | upcase | slice: 1,10}}</a></td>
+			<td><a href src=".{{ img.path }}" data-high-res-src=".{{ img.path }}" alt="" class="pannable-image">{{ airport_chart | upcase | slice: 1,10}}</a></td>
 		</tr>
 		
 		
@@ -40,9 +38,6 @@ date_format:    "%A, %B %-d, %Y"
 	</tbody>
 </table>
 
-<div id="image-gallery" class="cf">
-    <a src="images/korea_map.png" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image">test</a>
-</div>
 <script type="text/javascript">
 
     $(function () {
