@@ -41,13 +41,13 @@ date_format:    "%A, %B %-d, %Y"
 </table>
 
 <div id="image-gallery" class="cf">
-    <div id="pannable-image" src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image">test</div>
+    <div id="test" src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image"></div>
 </div>
 <script type="text/javascript">
 
-    $('test').click(function() {
+    $(function () {
     var viewer = ImageViewer({maxZoom: 800, zoomValue: 175});
-    $('.pannable-image').click(function () {
+    $('test').click(function () {
         var imgSrc = this.src,
             highResolutionImage = $(this).data('high-res-img');
         viewer.show(imgSrc, highResolutionImage);
