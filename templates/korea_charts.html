@@ -29,8 +29,8 @@ date_format:    "%A, %B %-d, %Y"
 	
 		<tr>
 			<td>{{ airport_name }}</td>
-			<td><a href=".{{ img.path }}">{{ airport_chart | upcase | slice: 1,100}}</td>
-			<td><a href="">{{ img_name }}</td>
+			<td><a href=".{{ img.path }}">{{ airport_chart | upcase | slice: 1,10}}</td>
+			<td><a>{{ img_name }}</td>
 		</tr>
 		
 		
@@ -45,7 +45,7 @@ date_format:    "%A, %B %-d, %Y"
 </div>
 <script type="text/javascript">
 
-    $(function openViewer() {
+    $(function () {
     var viewer = ImageViewer({maxZoom: 800, zoomValue: 175});
     $('.pannable-image').click(function () {
         var imgSrc = this.src,
