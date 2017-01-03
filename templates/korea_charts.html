@@ -30,7 +30,7 @@ date_format:    "%A, %B %-d, %Y"
 		<tr>
 			<td>{{ airport_name }}</td>
 			<td><a href=".{{ img.path }}">{{ airport_chart | upcase | slice: 1,100}}</td>
-			<td><a href onclick="javascript:openViewer();" data-high-res-src="images/korea_map_large.jpg">{{ img_name }}</td>
+			<td><a href="">{{ img_name }}</td>
 		</tr>
 		
 		
@@ -41,11 +41,11 @@ date_format:    "%A, %B %-d, %Y"
 </table>
 
 <div id="image-gallery" class="cf">
-    <img src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image"></img>
+    <img src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image">
 </div>
 <script type="text/javascript">
 
-    $(function {
+    $(function openViewer() {
     var viewer = ImageViewer({maxZoom: 800, zoomValue: 175});
     $('.pannable-image').click(function () {
         var imgSrc = this.src,
