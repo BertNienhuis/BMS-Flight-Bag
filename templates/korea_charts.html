@@ -41,7 +41,7 @@ date_format:    "%A, %B %-d, %Y"
 <script type="text/javascript">
 
     $(function () {
-    var viewer = ImageViewer({maxZoom: 800, zoomValue: 175});
+    var viewer = ImageViewer({maxZoom: 500, zoomValue: 100});
     $('.pannable-image').click(function () {
         var imgSrc = $(this).attr("src"),
             highResolutionImage = $(this).attr('data-high-res-src');
