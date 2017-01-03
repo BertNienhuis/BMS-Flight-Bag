@@ -41,7 +41,7 @@ date_format:    "%A, %B %-d, %Y"
 </table>
 
 <div id="image-gallery" class="cf">
-    <img src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image">
+    <img src="images/korea_map.png" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image">
 </div>
 <script type="text/javascript">
 
@@ -49,7 +49,7 @@ date_format:    "%A, %B %-d, %Y"
     var viewer = ImageViewer({maxZoom: 800, zoomValue: 175});
     $('.pannable-image').click(function () {
         var imgSrc = $(this).attr("src"),
-            highResolutionImage = $(this).data('high-res-img');
+            highResolutionImage = $(this).attr('data-high-res-src');
         viewer.show(imgSrc, highResolutionImage);
     });
 });</script>
