@@ -754,7 +754,7 @@
 
         if (container.is('img')) {
             imgElm = container;
-            imgSrc = imgElm[0].src;
+            imgSrc = imgElm[0].src || imgElm.attr('img-src');
             hiResImg = imgElm.attr('high-res-src') || imgElm.attr('data-high-res-src');
             container = imgElm.wrap('<div class="iv-container" style="display:inline-block; overflow:hidden"></div>').parent();
             imgElm.css({
