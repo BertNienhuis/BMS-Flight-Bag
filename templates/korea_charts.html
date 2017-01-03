@@ -30,7 +30,7 @@ date_format:    "%A, %B %-d, %Y"
 		<tr>
 			<td>{{ airport_name }}</td>
 			<td><a href=".{{ img.path }}">{{ airport_chart | upcase | slice: 1,10}}</td>
-			<td><a>{{ img_name }}</td>
+			<td><a src=".{{ img.path }}" data-high-res-src=".{{ img.path }}" alt="" class="pannable-image">{{ airport_chart | upcase | slice: 1,10}}</a></td>
 		</tr>
 		
 		
