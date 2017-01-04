@@ -21,19 +21,13 @@ date_format:    "%A, %B %-d, %Y"
 	
 	{% assign imgs = (site.static_files | sort: page.sort_by) %}
 	
-	{% for img in imgs  %}
-			{{ img[0] | downcase }},{{ img[0] }}{% unless forloop.last %}|{% endunless %}
-	{% endfor %}
-	
-	{% assign lc_imgs = imgs | split:'|' | sort %}
 
-	
-    {% for img in lc_imgs  %}
+    {% for img in imgs  %}
 		{% if img.path contains page.image_folder %}
-    {% assign img_name = img.path | remove: page.image_folder | split: '.' | first %}
-	{% assign airport_name = img_name | split: '_' | first  %}
-	{% assign airport_chart = img_name | remove: airport_name %}
-    {% assign img_date = img.modified_time | date: page.date_format %}
+			{% assign img_name = img.path | remove: page.image_folder | split: '.' | first %}
+			{% assign airport_name = img_name | split: '_' | first  %}
+			{% assign airport_chart = img_name | remove: airport_name %}
+			{% assign img_date = img.modified_time | date: page.date_format %}
 	
 		<tr>
 			<td>{{ airport_name }}</td>
@@ -42,7 +36,7 @@ date_format:    "%A, %B %-d, %Y"
 		</tr>
 		
 		
-    {% endif %}
+		{% endif %}
     {% endfor %}
 
 	</tbody>
