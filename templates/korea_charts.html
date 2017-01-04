@@ -19,8 +19,8 @@ date_format:    "%A, %B %-d, %Y"
 	<tbody>
 	
 	{% assign imgs = (site.static_files | sort: page.sort_by) %}
-    {% for img in imgs reversed %}
-    {% if img.path contains page.image_folder %}
+    {% for img in imgs  %}
+		{% if img.path contains page.image_folder %}
     {% assign img_name = img.path | remove: page.image_folder | split: '.' | first %}
 	{% assign airport_name = img_name | split: '_' | first  %}
 	{% assign airport_chart = img_name | remove: airport_name %}
