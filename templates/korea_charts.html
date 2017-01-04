@@ -22,7 +22,7 @@ date_format:    "%A, %B %-d, %Y"
 	{% assign imgs = (site.static_files | sort: page.sort_by) %}
 	
 	{% for img in imgs  %}
-			{{ img[0] | downcase}},{{ img[0] }}{% unless forloop.last %}|{% endunless %}
+			{{ img[0] | downcase }},{{ img[0] }}{% unless forloop.last %}|{% endunless %}
 	{% endfor %}
 	
 	{% assign lc_imgs = imgs | split:'|' | sort %}
