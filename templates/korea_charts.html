@@ -19,9 +19,8 @@ date_format:    "%A, %B %-d, %Y"
 	</thead>
 	<tbody>
 	
-	{% assign imgs = (site.static_files | sort: page.sort_by) %}
+	{% assign imgs = (site.static_files | downcase) %}
 	
-	<tr><td>{{site.static_files| downcase}}</td><td></td><td></td></tr>
 		
     {% for img in imgs  %}
 		{% if img.path contains page.image_folder %}
