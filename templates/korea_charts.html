@@ -21,8 +21,8 @@ date_format:    "%A, %B %-d, %Y"
 	
 	{% assign imgs = (site.static_files | sort: page.sort_by) %}
 	
-	<tr><td>{{assign_imgs}}</td></tr>
-	<tr><td>{{site.static_files | downcase}}</td></tr>	
+	<tr><td>{{assign_imgs}}</td><td></td><td></td></tr>
+		
     {% for img in imgs  %}
 		{% if img.path contains page.image_folder %}
     {% assign img_name = img.path | remove: page.image_folder | split: '.' | first %}
