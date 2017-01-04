@@ -27,7 +27,8 @@ date_format:    "%A, %B %-d, %Y"
 	
 	{% assign lc_imgs = imgs | split:'|' | sort %}
 
-    {% for lc_img in imgs  %}
+	
+    {% for img in lc_imgs  %}
 		{% if img.path contains page.image_folder %}
     {% assign img_name = img.path | remove: page.image_folder | split: '.' | first %}
 	{% assign airport_name = img_name | split: '_' | first  %}
