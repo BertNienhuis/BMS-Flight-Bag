@@ -1,12 +1,12 @@
 CACHE MANIFEST
-#v2
+#v2 
 
 CACHE:
 index.html
 templates\korea_map.html
 templates\korea_frequencies.html
 templates\korea_charts.html
-templates\checklists.html
+templates\checklist.html
 charts\*.gif
 images\korea_map_large.jpg
 images\korea_map.png
