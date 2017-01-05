@@ -30,7 +30,7 @@ date_format:    "%A, %B %-d, %Y"
 			{% assign img_date = img.modified_time | date: page.date_format %}
 	
 		<tr>
-			<td>{{ airport_name }}</td>
+			<td>{{ airport_name | capitalize  }}</td>
 			<td><a href src=".{{ img.path }}" data-high-res-src=".{{ img.path }}" alt="" class="pannable-image">{{ airport_chart | upcase | slice: 1,100}}</a></td>
 			<td> </td>
 		</tr>
@@ -40,6 +40,16 @@ date_format:    "%A, %B %-d, %Y"
     {% endfor %}
 
 	</tbody>
+	
+	<tbody>
+	{% assign imgs = (site.static_files | sort: page.sort_by) %}
+	
+
+    {% for img in imgs  %}
+	
+	{% endfor %}
+	</tbody>
+
 </table>
 
 <script type="text/javascript">
