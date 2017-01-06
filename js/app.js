@@ -40,9 +40,9 @@ var myApp = angular.module("myApp", ["ngRoute"])
         templateUrl : "templates/checklist.html",
 		controller: "appController",
 		activeNav: "checklists"
-    });
+    })
 	.when("/checklistpdf", {
-        templateUrl : "js/pdfjs/web/viewer.html?file=",
+        templateUrl : "js/pdfjs/web/viewer.html?file=Main_Checklists.pdf",
 		controller: "appController",
 		activeNav: "checklistpdf"
     });
