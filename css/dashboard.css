@@ -11,6 +11,11 @@ body {
 	height: 500px;
 }
 
+.black-tr>td{
+	background-color: #222222;
+	color: white;
+}
+
 
 /*
  * Global add-ons
