@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#v3
+#v5
 
 CACHE:
 index.html
@@ -9,6 +9,8 @@ templates\checklist.html
 images\korea_map_large.jpg
 images\korea_map.png
 css\dashboard.css
+js\pdfjs\web\Main_Checklists.pdf
+
 
 NETWORK:
 *
