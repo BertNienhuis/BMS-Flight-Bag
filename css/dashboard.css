@@ -18,9 +18,14 @@ body {
 	color: white;
 }
 
+.fill{
+	height: calc(100vh - 50px);
+	width: 100%;
+}
+
 iframe{
 	height: calc(100vh - 50px);
-	width: 100%
+	width: 100%;
 }
 
 
