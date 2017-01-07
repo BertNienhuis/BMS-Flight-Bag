@@ -2,16 +2,17 @@ CACHE MANIFEST
 #v4
 
 CACHE:
+css\dashboard.css
+images\korea_map_large.jpg
+images\korea_map_large_highalt.jpg
+images\korea_map.png
+pdf\EmergencyProcedures.pdf
+pdf\MainChecklist.pdf
 index.html
 templates\korea_map.html
 templates\korea_frequencies.html
 templates\checklist2.html
 templates\emergencies.html
-images\korea_map_large.jpg
-images\korea_map.png
-css\dashboard.css
-https://bertnienhuis.github.io/BMS-Flight-Bag/pdf/EmergencyProcedures.pdf
-https://bertnienhuis.github.io/BMS-Flight-Bag/pdf/MainChecklist.pdf
 
 
 NETWORK:
