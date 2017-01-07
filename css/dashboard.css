@@ -11,7 +11,7 @@ body {
 
 .pannable-image{
 	height: 300px;
-	padding: 10px;
+	margin: 10px;
 }
 
 .black-tr>td{
