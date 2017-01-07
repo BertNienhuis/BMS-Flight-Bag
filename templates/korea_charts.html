@@ -14,7 +14,6 @@ date_format:    "%A, %B %-d, %Y"
 		<tr>
 			<th>Airport</th>
 			<th>Diagram</th>
-			<th>Full</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -32,7 +31,6 @@ date_format:    "%A, %B %-d, %Y"
 		<tr>
 			<td>{{ airport_name | capitalize  }}</td>
 			<td><a href src=".{{ img.path }}" data-high-res-src=".{{ img.path }}" alt="" class="pannable-image">{{ airport_chart | upcase | slice: 1,100}}</a></td>
-			<td> </td>
 		</tr>
 		
 		
