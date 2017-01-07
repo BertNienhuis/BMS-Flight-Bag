@@ -41,6 +41,11 @@ var myApp = angular.module("myApp", ["ngRoute"])
 		controller: "appController",
 		activeNav: "emergencies"
     })
+	.when("/threats", {
+        templateUrl : "templates/threats.html",
+		controller: "appController",
+		activeNav: "threats"
+    })
 	.when("/checklistpdf", {
         templateUrl : "templates/checklist2.html",
 		controller: "appController",

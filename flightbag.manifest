@@ -1,5 +1,5 @@
 CACHE MANIFEST
-#v6
+#v7
 
 CACHE:
 css\dashboard.css
@@ -8,10 +8,12 @@ images\korea_map_large_highalt.jpg
 images\korea_map.png
 pdf\EmergencyProcedures.pdf
 pdf\MainChecklist.pdf
+pdf\falcon4_threat_quickguide.pdf
 index.html
 templates\korea_map.html
 templates\korea_frequencies.html
 templates\checklist2.html
+templates\threats.html
 templates\emergencies.html
 
 
