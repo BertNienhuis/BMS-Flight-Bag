@@ -1,13 +1,19 @@
-<div class="fill" style="backgrond-color: red">
-
-<div id="image-gallery-3" class="cf">
-    <img src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image fill">
+<div class="container-fluid">
+<H2>Map</H2>
+<hr>
+<p>Click on the image for improved zooming and panning.
+<div id="image-gallery" class="cf">
+    <img src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image img-rounded">
+	<img src="images/korea_map_large_highalt.jpg" data-high-res-src="images/korea_map_large_highalt.jpg" alt="" class="pannable-image img-rounded">
 </div>
 <script type="text/javascript">
-	//Example 3
-	$(function () {
-		$('.pannable-image').ImageViewer({maxZoom: 800, zoomValue: 300});
-	});
-</script>
 
+    $(function () {
+    var viewer = ImageViewer({maxZoom: 800, zoomValue: 175});
+    $('.pannable-image').click(function () {
+        var imgSrc = this.src,
+            highResolutionImage = $(this).data('high-res-img');
+        viewer.show(imgSrc, highResolutionImage);
+    });
+});</script>
 </div>
