@@ -7,6 +7,10 @@ body {
   padding-top: 50px;
 }
 
+html, body {
+ height: 100%;
+}
+
 .pannable-image{
 	height: 500px;
 }
