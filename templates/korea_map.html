@@ -3,7 +3,7 @@
 <hr>
 <p>Click on the image for improved zooming and panning.
 <div id="image-gallery" class="cf">
-    <img src="images/korea_map_large.jpg" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image img-rounded">
+    <img src="images/korea_map.png" data-high-res-src="images/korea_map_large.jpg" alt="" class="pannable-image img-rounded">
 	<img src="images/korea_map_large_highalt.jpg" data-high-res-src="images/korea_map_large_highalt.jpg" alt="" class="pannable-image img-rounded">
 </div>
 <script type="text/javascript">
@@ -11,8 +11,8 @@
     $(function () {
     var viewer = ImageViewer({maxZoom: 800, zoomValue: 175});
     $('.pannable-image').click(function () {
-        var imgSrc = this.src,
-            highResolutionImage = $(this).data('high-res-img');
+        var imgSrc = $(this).attr('src'),
+            highResolutionImage = $(this).attr('data-high-res-src');
         viewer.show(imgSrc, highResolutionImage);
     });
 });</script>
