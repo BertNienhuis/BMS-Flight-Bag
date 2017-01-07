@@ -36,10 +36,10 @@ var myApp = angular.module("myApp", ["ngRoute"])
 		controller: "appController",
 		activeNav: "emergencyprocedures"
     })
-	.when("/checklists", {
-        templateUrl : "templates/checklist.html",
+	.when("/emergencies", {
+        templateUrl : "templates/emergencies.html",
 		controller: "appController",
-		activeNav: "checklists"
+		activeNav: "emergencies"
     })
 	.when("/checklistpdf", {
         templateUrl : "templates/checklist2.html",
