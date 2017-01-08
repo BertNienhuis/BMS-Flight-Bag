@@ -28,6 +28,10 @@ iframe{
 	height: calc(100vh - 50px);
 	width: 100%;
 }
+.iframe-div{
+		overflow:auto;
+		-webkit-overflow-scrolling:touch
+}
 
 
 /*
